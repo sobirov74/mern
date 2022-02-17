@@ -20,7 +20,6 @@ const Input: React.FC<ActionHendler> = (props) => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(event.target.value);
-    // console.log(value);
   };
 
   return (
