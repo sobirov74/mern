@@ -11,7 +11,7 @@ const Input: React.FC<ActionHendler> = (props) => {
 
   const keyPressHandler = (event: React.KeyboardEvent) => {
     if (event.key === "Enter") {
-      if (ref.current?.value !== "") {
+      if (ref.current?.value) {
         props.onAdd(ref.current!.value);
         setInput("");
       }
