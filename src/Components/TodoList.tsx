@@ -7,20 +7,15 @@ type todoListProps = {
   onToggle(id: number): void;
 };
 
-
 const TodoList: React.FC<todoListProps> = ({ todos, onDelete, onToggle }) => {
   if (todos.length === 0) {
     return <p className="center">The table is empty</p>;
   }
 
-
-
-
   const handleDelete = (event: React.MouseEvent, id: number) => {
     event.preventDefault();
     onDelete(id);
   };
-
 
   return (
     <ul>
@@ -44,6 +39,7 @@ const TodoList: React.FC<todoListProps> = ({ todos, onDelete, onToggle }) => {
                   checked={todo.complated}
                   onChange={onToggle.bind(null, todo.id)}
                 />
+  
                 <span>{todo.title}</span>
                 <i
                   onClick={(event) => handleDelete(event, todo.id)}
